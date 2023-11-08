@@ -1,0 +1,36 @@
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
+    <style>
+    *{
+        background-color:#000000;
+    }
+    </style>
+</head>
+<body>
+    <center><canvas id="myCanvas"></canvas></center>
+    <script type="text/javascript" src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
+    <script type="text/javascript">
+        var red = [0, 100, 63];
+        var orange = [40, 100, 60];
+        var green = [75, 100, 40];
+        var blue = [196, 77, 55];
+        var purple = [280, 50, 60];
+        letterColors = [red, orange, green, blue, purple];
+
+        function getRandomName(names) {
+            var randomIndex = Math.floor(Math.random() * names.length);
+            return names[randomIndex]
+        }
+
+        //ADD YOUR NAME HERE
+        names = ["Hunter", "Person 2", "Person 3", "Person 4"]
+        drawName(getRandomName(names), letterColors);
+        bounceBubbles();
+
+        setTimeout(function(){
+            window.location.reload(1);
+            drawName(getRandomName(names), letterColors);
+        }, 5000);
+    </script>
+</body>
